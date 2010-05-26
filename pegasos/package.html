@@ -1,0 +1,54 @@
+<!--
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ under the License.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Sequential Support Vector Machine(SVM) with Linear Kernel </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+      <div><h2> Introduction</h2>
+          The sequential SVM package provides Binary Classification, Multi-classification and Regression based on <A HREF="http://www.cs.huji.ac.il/~shais/code/index.html">Pegasos</A>. 
+          The format of datasets is exactly as same as SVMlight and Libsvm, and the datasets could be stored on Hadoop cluster and local computer.
+      </div>
+      <div><h2> Implementation </h2>
+          <p> Currently, this package provides (Features):
+          <ol>
+              <li>Sequential SVM linear solver, include training and testing </li>
+              <li>Support general file system and HDFS right now</li>
+              <li>Supporting large-scale data set training. Because of the Pegasos only need to sample certain samples, this package supports to pre-fetch
+the certain size (e.g. max iteration) of samples to memory.
+For example: if the size of data set has 100,000,000 samples, due to the default maximum iteration is 100,000,
+as the result, this package only random load 100,000 samples to memory</li>
+              <li>Supoorting Multi-classfication based on Map-Reduce framework</li>
+              <li>Supporting Regression</li>
+          </ol>
+          </p>
+      </div>
+
+      <div><h2> Usage </h2>
+          Check this documents <A HREF="http://issues.apache.org/jira/browse/MAHOUT-232">Document of SVM on Mahout</A>
+      </div>
+      
+<DIV>&nbsp;</DIV>
+<DIV align="center">
+  Copyright &copy; 2010 <A HREF="http://www.apache.org">Apache Software Foundation</A>
+</DIV>
+
+  </body>
+
+
+</html>
